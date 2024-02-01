@@ -77,10 +77,23 @@ dap.configurations.c = {
     end,
   },
   {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function ()
+      vim.g.rustfmt_autosave = 1
+    end,
+  },
+  {
+  'mrcjkb/rustaceanvim',
+  version = '^4', -- Recommended
+  ft = { 'rust' },
+  },
+  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
         "clangd",
+        "rust-analyzer",
         "clang-format",
         "codelldb",
       }
